@@ -9,6 +9,8 @@ import { HomePage } from '../pages/home/home';
 import { RegisterPage } from '../pages/register/register';
 import { UserRegisterPage } from '../pages/user-register/user-register';
 import { UserSignupPage } from '../pages/user-signup/user-signup';
+import { SubcategoryPage } from '../pages/subcategory/subcategory';
+import { VerifyjobPage } from '../pages/verifyjob/verifyjob';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { UserSignupPage } from '../pages/user-signup/user-signup';
     HomePage,
     RegisterPage,
     UserRegisterPage,
-    UserSignupPage
+    UserSignupPage,
+    SubcategoryPage,
+    VerifyjobPage
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,9 @@ import { UserSignupPage } from '../pages/user-signup/user-signup';
     HomePage,
     RegisterPage,
     UserRegisterPage,
-    UserSignupPage
+    UserSignupPage,
+    SubcategoryPage,
+    VerifyjobPage
   ],
   providers: [
     StatusBar,

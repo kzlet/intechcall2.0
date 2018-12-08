@@ -5,8 +5,8 @@ page-user-register {
       .logo {
         width: 70%;
         height: auto;
-        padding-top: 0vh;
-        margin-bottom: 15vh;
+       // padding-top: 0vh;
+       // margin-bottom: 15vh;
       }
       span {
         color: white;
@@ -38,7 +38,7 @@ page-user-register {
         color: white;
         position: absolute;
         top: 0;
-        padding: 10vw;
+        padding: 0vw;
         text-align: center;
         width: 100%;
         margin: 0 auto;
@@ -51,4 +51,17 @@ page-user-register {
       .color-bar{
         background: linear-gradient(#a92c77, #ee5e35);
     }
+
+    .has-header{
+        background-image: url('../assets/imgs/1.jpg');
+        width: 100%;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
 }
+
+
+
+    

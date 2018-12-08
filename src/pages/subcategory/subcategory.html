@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sub Cat</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-list>
+        <button ion-item *ngFor="let item of posts, let i = index" (click)="itemSelected(i)">
+          {{ item.name }}
+        </button>  
+      </ion-list>
+</ion-content>
