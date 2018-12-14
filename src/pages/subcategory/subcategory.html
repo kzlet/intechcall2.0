@@ -6,9 +6,39 @@
 
 
 <ion-content>
-    <ion-list>
-        <button ion-item *ngFor="let item of posts, let i = index" (click)="itemSelected(i)">
+
+    <ion-item-group>
+          <ion-item-divider color="light">Select Service</ion-item-divider>
+        <ion-item ion-item *ngFor="let item of subcat, let i = index" (click)="itemSelected(i, item.name)">
           {{ item.name }}
-        </button>  
-      </ion-list>
+        </ion-item>
+        <ion-item-divider color="light">None of the above</ion-item-divider>
+
+        <ion-card style="border-radius:12px 12px">
+            <ion-item>
+                <ion-input type="text" placeholder="Job Title"></ion-input>
+              </ion-item>
+            
+              <ion-item>
+                <ion-input type="password" placeholder="Description"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label>How often do you need this service ?</ion-label>
+                  <ion-select [(ngModel)]="priority">
+                    <ion-option value="nes">Daily</ion-option>
+                    <ion-option value="n64">Weekly</ion-option>
+                    <ion-option value="ps">Monthly</ion-option>
+                  </ion-select>
+                </ion-item>
+
+              <button ion-button round full style="padding:10px" (click)="showToast()">Send</button>
+        </ion-card>
+
+
+
+    </ion-item-group>  
+
+
+
 </ion-content>
