@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Job Confirmation</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ 
+  <ion-card style="border-radius:12px 12px">
+  
+    
+  <ion-item>
+    <ion-label>Use current Address:</ion-label>
+    <ion-radio checked="flase" value="go" [(ngModel)]="current"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(disabled)]="!current" type="text" placeholder="Address"></ion-input>
+  </ion-item>
+
+<h4>Any Special Request:</h4>
+
+<ion-item>
+  <ion-input type="text" placeholder="request"></ion-input>
+</ion-item>
+
+<button ion-button full round (click)="next()">Post Job</button>
+  </ion-card>
+
+</ion-content>

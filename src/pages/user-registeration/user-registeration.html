@@ -1,0 +1,106 @@
+<ion-header>
+    <ion-toolbar no-border-top>
+      <ion-segment [(ngModel)]="user">
+        <ion-segment-button value="login" style="font-size: 15px ;color: FFA500">
+          Log-In
+        </ion-segment-button>
+        <ion-segment-button value="signup" style="font-size: 15px ;color: FFA500">
+          Sign-Up
+        </ion-segment-button>
+      
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+  
+  
+  <ion-content padding no-bounce>
+    
+    <div [ngSwitch]="user">
+     
+      <ion-card style="border-radius:12px 12px" *ngSwitchCase="'login'">
+         
+           
+               
+                
+          <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+              <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                <ion-input type="text" placeholder="Email" [(ngModel)]="email"></ion-input>
+              </ion-item>
+            </div>
+      
+            <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                  <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+                </ion-item>
+              </div>
+  
+              <div align="right">
+                  <h5 style="color:#0077c8;padding-right:5px" (click)="forget()">Forget Password ?</h5>
+                 </div>
+  
+  
+                 <div align="center" style="padding-top:8px">
+                    <button ion-button full color="light" round outline (click)="signIn()" class="login" style="width: 94%;font-size:0.85em">Login</button>
+                  </div>
+  
+           
+            </ion-card>
+  
+       
+            <ion-card style="border-radius:12px 12px" *ngSwitchCase="'signup'">
+         
+                <!-- <div align="center" (click)="presentActionSheet()">
+                    <img *ngIf="imageURI === undefined || imageURI === 'undefined'" src="imgs/profile.png" style="width: 27%;"/>
+                    <img *ngIf="imageURI != undefined || imageURI != 'undefined'" src="{{imageURI}}" style="width: 27%;"/>
+                    <!--p style="color:#c68d2c;margin-top: 3%;">Upload your picture</p
+                  </div> -->
+              
+              
+                  <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                      <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                        <ion-input type="text" placeholder="Name" [(ngModel)]="name"></ion-input>
+                      </ion-item>
+                    </div>
+              
+                    <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                        <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                          <ion-input type="text" placeholder="Email" [(ngModel)]="email"></ion-input>
+                        </ion-item>
+                      </div>
+              
+                      <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                          <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                            <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+                          </ion-item>
+                        </div>
+  
+                        <div class="col col-md-12 col-sm-12 col-xs-12 col-lg-12" style="padding-top:8px">
+                            <ion-item class="item-ios" style="border-radius: 12px 12px;">
+                              <ion-input type="password" placeholder="Confirm Password" [(ngModel)]="conpassword"></ion-input>
+                            </ion-item>
+                          </div>
+  
+  
+                            <div align="center" style="margin-top: 16px;">
+                              <p>By using this application you agree to our</p>
+                              <p><b style="color:#0077c8" (click)="openModal1();">Terms of Use</b>&nbsp;and&nbsp;<b style="color:#0077c8" (click)="openModal2();">Privacy Policy</b></p>
+                            </div>
+      
+      
+                            <div align="center" style="padding-top:5px">
+                              <button ion-button full color="light" class="login" round outline (click)="signup()" style="width: 94%;font-size:0.85em">Create Account</button>
+                            </div>
+      
+             
+           
+            </ion-card>
+  
+    </div>
+  </ion-content>
+  
+  <ion-footer style="background-color:#0077c8;">
+    <!--button ion-button full style="background-color:#c68d2c; color:white" (click)="next()">Switch to Mosque</button-->
+    <div align="center"><p style="color:white"><b>© LET'SLOCK TECHNOLOGIES</b></p></div>
+  </ion-footer>
+  
+  
